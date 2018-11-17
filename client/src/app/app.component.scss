@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 20px 15px 0;
+}
+app-graphic {
+  width: 80%;
+}
+.left-side {
+  width: 20%;
+  .btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #3cba9f;
+    margin-left: 10px;
+    color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .selection-block {
+    margin-top: 30px;
+    select {
+      margin: 0px 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

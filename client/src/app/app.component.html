@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <aside class="left-side">
+    <a class="btn" (click)="getTemp()">Температура</a>
+    <a class="btn" (click)="getPrecipitation()">Осадки</a>
+    <div class="selection-block">
+      <label for="startDate">От</label>
+      <select
+        id="startDate"
+        [(ngModel)]="startDate"
+        (ngModelChange)="onChange()"
+        ><option
+          *ngFor="let year of years"
+          [disabled]="year >= endDate"
+          [value]="year"
+          >{{ year }}</option
+        ></select
+      >
+      <label for="endDate">До</label>
+      <select id="endDate" [(ngModel)]="endDate" (ngModelChange)="onChange()"
+        ><option
+          *ngFor="let year of years"
+          [disabled]="year <= startDate"
+          [value]="year"
+          >{{ year }}</option
+        ></select
+      >
+    </div>
+  </aside>
+  <app-graphic></app-graphic>
+</div>

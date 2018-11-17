@@ -17,7 +17,7 @@ function createResult(e) {
   for (let i = 0; i < years; i++) {
     // количество дней в феврале
     let dayInFeb = 28;
-    let year = +data[step + 1].t.split('-')[0];
+    let year = +data[step].t.split('-')[0];
 
     // количество дней в году
     let count = 365;

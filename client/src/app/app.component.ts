@@ -35,6 +35,7 @@ export class AppComponent {
   setYears(data) {
     this.startDate = +data[0].t.split('-')[0];
     this.endDate = +data[data.length - 1].t.split('-')[0];
+    this.years = [];
     for (let i = this.startDate; i <= this.endDate; i++) {
       this.years.push(i);
     }

@@ -43,4 +43,7 @@ export class AppComponent {
   onChange() {
     this.generateRes();
   }
+  trackByFn(index, item) {
+    return index;
+  }
 }

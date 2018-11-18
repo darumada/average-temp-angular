@@ -9,7 +9,7 @@
         [(ngModel)]="startDate"
         (ngModelChange)="onChange()"
         ><option
-          *ngFor="let year of years"
+          *ngFor="let year of years; trackBy: trackByFn"
           [disabled]="year >= endDate"
           [value]="year"
           >{{ year }}</option
@@ -18,7 +18,7 @@
       <label for="endDate">До</label>
       <select id="endDate" [(ngModel)]="endDate" (ngModelChange)="onChange()"
         ><option
-          *ngFor="let year of years"
+          *ngFor="let year of years; trackBy: trackByFn"
           [disabled]="year <= startDate"
           [value]="year"
           >{{ year }}</option
